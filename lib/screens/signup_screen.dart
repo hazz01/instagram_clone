@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:instagram_clone/resources/auth_methods.dart';
 import 'package:instagram_clone/utils/colors.dart';
 import 'package:instagram_clone/widgets/text_field_input.dart';
+import 'package:instagram_clone/utils/utils.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -25,6 +26,10 @@ class _SignupScreenState extends State<SignupScreen> {
     _bioController.dispose();
     _usernameController.dispose();
   }
+
+  // void selectImage() async {
+  //   await pickImage(source);
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -116,6 +121,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       password: _passwordController.text,
                       username: _usernameController.text,
                       bio: _bioController.text);
+                  print(res);
                 },
                 child: Container(
                   child: const Text('SignUp'),
